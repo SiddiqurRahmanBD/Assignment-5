@@ -1,21 +1,19 @@
 
 
-// Traverse
+// Call Button And New div Create
 const btncalls = document.getElementsByClassName("btn-call");
 
 
 for(let btnCall of btncalls){
     btnCall.addEventListener("click", function(){
-      // alert("button clicked");
 
     const serviceTittle = btnCall.parentNode.parentNode.children[1].children[0].innerText;
-    // alert(serviceTittle);
+    
     const serviceNum = btnCall.parentNode.parentNode.children[2].children[0].innerText;
       let now = new Date();
       let time = now.toLocaleTimeString();
       console.log(time);
 
-    // alert(serviceNum);
        const totalCoin = document.getElementById("total-coin").innerText;
          if( totalCoin <= 0 ){
          alert("❌ You don't have sufficient coin! You need more coin for call");
@@ -27,7 +25,6 @@ for(let btnCall of btncalls){
      
        
     const historyCard = document.getElementById("history-card")
-   //  console.log(historyCard);
         const newCard = document.createElement("div");
         newCard.innerHTML = `
              <div class="shadow-sm p-3 rounded-sm flex justify-between items-center">
@@ -43,7 +40,7 @@ for(let btnCall of btncalls){
     
     });
 }
-// Copy
+// Copy Button
 const btncopies = document.getElementsByClassName("btn-copy");
 console.log(btncopies);
 for( let btnCopy of btncopies){
@@ -65,9 +62,10 @@ for( let heart of fahearts){
       const totalHeart = document.getElementById("total-heart").innerText
      const currentHeart = Number(totalHeart) + 1;
       document.getElementById("total-heart").innerText = currentHeart;
-      // console.log(heartIcon);
+      
       });
 }
+//Clear Button
  document.getElementById("btn-clear").addEventListener("click", function(){
 
    const historyCard = document.getElementById("history-card")
