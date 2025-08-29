@@ -30,7 +30,7 @@ for(let btnCall of btncalls){
    //  console.log(historyCard);
         const newCard = document.createElement("div");
         newCard.innerHTML = `
-             <div class="flex justify-between items-center">
+             <div class="shadow-sm p-3 rounded-sm flex justify-between items-center">
                   <div class="p-4">
                      <h2 class="font-bold text-sm"> ${serviceTittle}</h2>
                      <p class=" text-gray-400 text-sm">${serviceNum}</p>
@@ -49,12 +49,11 @@ console.log(btncopies);
 for( let btnCopy of btncopies){
    btnCopy.addEventListener("click", ()=>{
       const copyNumber = btnCopy.parentNode.parentNode.children[2].children[0].innerText;
-      console.log(copyNumber);
+      navigator.clipboard.writeText(copyNumber);
       const totalCopy = document.getElementById("total-copy").innerText;
-      console.log(totalCopy);
       const currentCopy = Number(totalCopy) + 1;
       document.getElementById("total-copy").innerText = currentCopy;
-      alert("Copied: "+copyNumber);
+      alert("Copied: "+ copyNumber);
       });
 }
 // heart icon
