@@ -16,7 +16,7 @@ for(let btnCall of btncalls){
 
        const totalCoin = document.getElementById("total-coin").innerText;
          if( totalCoin <= 0 ){
-         alert("❌ You don't have sufficient coin! You need more coin for call");
+         alert("❌ You don't have sufficient coin! You need more coin for the Call");
          return;
        }
        const currentCoin = Number(totalCoin) - 20;
